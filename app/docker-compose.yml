@@ -2,3 +2,9 @@ version: '3'
 services:
   my-service:
     image: my-python-app-back
+    ports:
+      - 5000:5000
+    volumes:
+      - ./data:/app/back
+    environment:
+      - FLASK_ENV=production
